@@ -1,0 +1,61 @@
+<h2>Add Employee</h2>
+<table border="1">
+  <tr>
+    <td><label>ID</label></td>
+    <td><input type="text" #id></td>
+  </tr>
+  <tr>
+    <td><label>Name</label></td>
+    <td><input type="text" #name></td>
+  </tr>
+  <tr>
+    <td><label>Salary</label></td>
+    <td><input type="text" #sal></td>
+  </tr>
+  <tr>
+    <td><label>Department</label></td>
+    <td><input type="text" #dept></td>
+  </tr>
+  <tr><td> <button (click)="add(id.value(),name.value,sal.value,dept.value)">Add Employee</button></td></tr>
+</table>
+
+
+
+<h1>Show All Employees</h1>
+<table border="1">
+  <tr>
+    <th> ID</th>
+    <th> Name</th>
+    <th> Salary</th>
+    <th> Department</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let employee of employees">
+   <td>{{employee.empId}}</td>
+   <td>{{employee.empName}}</td>
+   <td>{{employee.empSal}}</td>
+   <td>{{employee.empDep}}</td>
+   <td><button>UPDATE</button></td>
+   <td><button>DELETE</button></td>
+  </tr>
+</table>
+<h1>Update Employee</h1>
+<table border="1">
+  <tr>
+    <td><label>ID</label></td>
+    <td><input type="text" #id></td>
+  </tr>
+  <tr>
+    <td><label>Name</label></td>
+    <td><input type="text" #name></td>
+  </tr>
+  <tr>
+    <td><label>Salary</label></td>
+    <td><input type="text" #sal></td>
+  </tr>
+  <tr>
+    <td><label>Department</label></td>
+    <td><input type="text" #dept></td>
+  </tr>
+  <tr><td> <button>Update Employee</button></td></tr>
+</table>
