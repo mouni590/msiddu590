@@ -1,0 +1,21 @@
+package com.dao;
+
+import java.util.HashMap;
+
+import com.bean.BankBean;
+
+public class BankDao {
+
+	BankBean bankBeanObj;
+	HashMap<Long, BankBean> hm = new HashMap<Long, BankBean>(); 
+	
+	public void addCustomer(BankBean BeanObj)
+	{
+	this.bankBeanObj = BeanObj;
+	hm.put(bankBeanObj.getAccNo(), BeanObj); 
+	}
+	 public HashMap<Long, BankBean> hm(){  
+	return hm;
+	 }
+
+}
